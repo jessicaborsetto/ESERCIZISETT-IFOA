@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;700&family=Prata&family=Roboto:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;700&family=Prata&family=Roboto:wght@300;400;700&display=swap');
 
 html, body{
     margin: 0 auto;
@@ -12,17 +11,17 @@ html, body{
 
 header{
     background-color: black;
-    padding: 50px;
+    padding: 20px;
+    text-align: left;
 }
 header img{
-    width: 45%;
+    width: 200px;
 }
 
 /*INTESTAZIONE*/
 #intestazione{
     background-image: url(../images/banner.jpg);
-    margin: -21px auto;
-    padding: 10% 20%;   
+    padding: 7% 20%;   
 }
 
 h1, h3{
@@ -38,7 +37,7 @@ p{
 }
 
 #bottone{
-    width: 35%;
+    width: 20%;
     margin-top: 20px;
     padding: 15px 10px;
     background-color: #f04c2f;
@@ -49,14 +48,17 @@ p{
 }
 
 /*CONTENUTO PRINCIPALE*/
-.contenuto {
-    padding: 5% 20%;
-    margin: 0;
+.container{
+    display: inline-block;
+    text-align: left;
+    padding:auto 20%;
+    font-size: 20px;
 }
 
 .cerchio{
     border-radius: 50%;
-    width: 50%;
+    width: 10%;
+    text-align: left;
 }
 
 /* CITAZIONE */
@@ -112,10 +114,6 @@ h2{
 .contatti {
     font-family: 'Open Sans', sans-serif;
     display: inline-block;
-}
-
-address{
-    text-decoration: none;
 }
 
 hr{
