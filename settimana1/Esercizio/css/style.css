@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;700&family=Prata&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;700&family=Prata&family=Roboto:wght@300;400;700&display=swap');
+
+html, body{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box ;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 1.2rem ;
+}
+
+header{
+    background-color: black;
+    padding: 50px;
+}
+header img{
+    width: 45%;
+}
+
+
+
+/*INTESTAZIONE*/
+#intestazione{
+    background-image: url(../images/banner.jpg);
+    margin: -21px auto;
+    padding: 10% 20%;   
+}
+
+h1, h3{
+    line-height: 1.5;
+    color: #25a2c3;
+}
+h1, h3, #bottone{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+p{
+    line-height: 1.65;
+}
+
+#bottone{
+    width: 35%;
+    margin-top: 20px;
+    padding: 15px 10px;
+    background-color: #f04c2f;
+    border: 2px;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*CONTENUTO PRINCIPALE*/
+.contenuto {
+    margin: 10% 20%;
+}
+
+.cerchio{
+    border-radius: 50%;
+    width: 50%;
+}
+
+/* CITAZIONE */
+#citazione{
+    color: #fff;
+    background-color: #e22d0e;
+    padding: 5% 10%;
+}
+
+blockquote cite{
+    display: block;
+    padding-top: 30px;
+}
+blockquote{
+    margin-bottom: 0;
+}
+
+/* CARTE */
+.carta1, .carta2, .carta3{
+    border: 1px solid #dee1e3;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:top;
+}
+figcaption{
+    padding-top: 65%;
+    padding-bottom: 5% ;
+}
+.carta1{
+    background-image: url(../images/foto1.jpg);
+}
+.carta2{
+    background-image: url(../images/foto2.jpg);
+}
+.carta3{
+    background-image: url(../images/foto3.jpg);
+}
+
+/* FOOTER */
+footer {
+    padding: 5% 20% ;
+    color: #fff;
+    background-color: #25a2c3;
+    font-size: 19px;
+}
+footer a{
+    color: #fff;
+}
+
+h2{
+    margin-top: 0;
+}
+.contatti {
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+}
+
+hr{
+    margin: 10% auto;
+    border: 1px solid #fff;
+    width: 80%;
+}
