@@ -48,17 +48,30 @@ p{
 }
 
 /*CONTENUTO PRINCIPALE*/
+
 .container{
     display: inline-block;
     text-align: left;
-    padding:auto 20%;
-    font-size: 20px;
+    padding: 1% 20%;
+    width:auto;
 }
 
 .cerchio{
     border-radius: 50%;
-    width: 10%;
+    width:40%;
     text-align: left;
+    display: inline;
+    padding: 70px 0;
+}
+.immagine{
+    padding-top: 10%;
+}
+.contenuto {
+    display: inline-block;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 100px;
+    width: 50%;
 }
 
 /* CITAZIONE */
@@ -82,7 +95,11 @@ blockquote{
     background-repeat: no-repeat;
     background-size: contain;
     background-position:top;
+    display: inline-block;
+    width: 20%;
+    margin: 5% 5%;
 }
+
 .carta1{
     background-image: url(../images/foto1.jpg);
 }
@@ -106,6 +123,8 @@ footer {
 }
 footer a{
     color: #fff;
+    display: inline-block;
+   
 }
 
 h2{
@@ -113,11 +132,17 @@ h2{
 }
 .contatti {
     font-family: 'Open Sans', sans-serif;
-    display: inline-block;
+    text-align: left;
+    padding-left: 41%;
+    padding-top: 1%;
 }
 
 hr{
     margin: 10% auto;
     border: 1px solid #fff;
     width: 80%;
+}
+
+i{
+    padding-right: 10px ;
 }
