@@ -111,9 +111,7 @@ figure{
     background-image: url(../images/foto2.jpg);
 }
 .carta3{
-    background-image: url(../images/foto3.jpg);
-    width: 20%;
-    
+    background-image: url(../images/foto3.jpg);;   
 }
 figcaption{
     padding-top: 65%;
