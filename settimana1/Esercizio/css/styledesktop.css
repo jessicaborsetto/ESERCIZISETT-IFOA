@@ -90,11 +90,14 @@ blockquote{
 }
 
 /* CARTE */
+figure{
+    text-align: center;
+}
+
 .carta1, .carta2, .carta3{
     border: 1px solid #dee1e3;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position:top;
     display: inline-block;
     width: 20%;
     margin: 5% 5%;
@@ -123,7 +126,6 @@ footer {
 }
 footer a{
     color: #fff;
-    display: inline-block;
    
 }
 
