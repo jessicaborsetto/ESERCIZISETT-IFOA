@@ -101,6 +101,7 @@ figure{
     display: inline-block;
     width: 20%;
     margin: 5% 5%;
+    vertical-align: top;
 }
 
 .carta1{
@@ -111,11 +112,15 @@ figure{
 }
 .carta3{
     background-image: url(../images/foto3.jpg);
+    width: 20%;
+    
 }
 figcaption{
     padding-top: 65%;
     padding-bottom: 5% ;
+    
 }
+
 
 /* FOOTER */
 footer {
