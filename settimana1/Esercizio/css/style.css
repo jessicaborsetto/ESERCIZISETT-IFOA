@@ -52,7 +52,8 @@ p{
 
 /*CONTENUTO PRINCIPALE*/
 .contenuto {
-    margin: 10% 20%;
+    padding: 5% 20%;
+    margin: 0;
 }
 
 .cerchio{
@@ -82,10 +83,6 @@ blockquote{
     background-size: contain;
     background-position:top;
 }
-figcaption{
-    padding-top: 65%;
-    padding-bottom: 5% ;
-}
 .carta1{
     background-image: url(../images/foto1.jpg);
 }
@@ -94,6 +91,10 @@ figcaption{
 }
 .carta3{
     background-image: url(../images/foto3.jpg);
+}
+figcaption{
+    padding-top: 65%;
+    padding-bottom: 5% ;
 }
 
 /* FOOTER */
