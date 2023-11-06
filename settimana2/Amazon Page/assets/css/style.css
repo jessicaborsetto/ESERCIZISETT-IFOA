@@ -92,6 +92,10 @@ figure img{
     width: 100%;   
 }
 
+figcaption h2{
+    margin: 0;
+}
+
 /*FOOTER*/
 
 footer{
