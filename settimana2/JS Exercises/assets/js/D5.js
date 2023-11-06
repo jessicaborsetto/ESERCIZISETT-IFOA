@@ -48,7 +48,7 @@ console.log (reversePets())
 delete pets[0];
 console.log('Esercizio 4')
 console.log(pets)
-let newPet = 'dog'
+let newPet = 'redfish'
 pets.push(newPet)
 console.log(pets)
 
