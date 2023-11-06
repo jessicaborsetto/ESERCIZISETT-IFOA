@@ -45,6 +45,12 @@ console.log (reversePets())
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
 
+delete pets[0];
+console.log('Esercizio 4')
+console.log(pets)
+let newPet = 'dog'
+pets.push(newPet)
+console.log(pets)
 
 
 /* ESERCIZIO 5
@@ -94,7 +100,7 @@ console.log('Esercizio 6')
 cars.push(newCar)
 console.log(cars)
 
-//per eliminare i trims dovrei usare delete
+//per eliminare i trims dovrei usare delete?
 
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
