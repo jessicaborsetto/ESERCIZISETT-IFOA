@@ -13,7 +13,8 @@ header{
 }
 header img {
     width: 7%;
-    padding: 1%;
+    padding: 1% 0 0 1%;
+    margin: 0;
 }
 
 header ul{
@@ -29,9 +30,6 @@ li{
 }
 
 /* MAIN */
-main{
-    width: 100%;
-}
 
 #orange{
     margin: 1%;
@@ -55,11 +53,14 @@ main{
     font-size: 35px;
 }
 
+h3{
+    font-weight: 500;
+}
+
 .categorie{
     background-color: #fff;
     margin: 1%;
     text-align: center;
-    
 }
 
 .categorie img{
@@ -67,17 +68,18 @@ main{
     height: 37vh;
     border-radius: 10%;
     box-shadow: 4px 4px 4px lightgray;
-    margin: 1%;
+    margin: 0  1.5% 2% 1.5%;
 }
 
 .categorie h2{
     text-align: left;
     padding: 20px 20px;
+    margin: 0;
 }
 
 span{
     font-size: 16px;
-    color: #24515A;
+    color: #356F7F;
 }
 
 figure{
@@ -90,3 +92,23 @@ figure img{
     width: 100%;   
 }
 
+/*FOOTER*/
+
+footer{
+    background-color: #212b38;
+    text-align: center;
+}
+footer img{
+    width: 17%;
+    padding: 50px 0;
+}
+
+#anchor{
+    background-color: #324050;
+    padding: 20px 0;
+}
+
+a{
+    color: #fff;
+    font-weight: 700;
+}  
