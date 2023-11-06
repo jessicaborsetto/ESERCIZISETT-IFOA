@@ -29,6 +29,10 @@ li{
 }
 
 /* MAIN */
+main{
+    width: 100%;
+}
+
 #orange{
     margin: 1%;
     padding: 1px;
@@ -61,9 +65,9 @@ li{
 .categorie img{
     width: 20vw;
     height: 37vh;
-    padding: 20px 20px;
     border-radius: 10%;
-    box-shadow: 6px 6px 8px lightgray;
+    box-shadow: 4px 4px 4px lightgray;
+    margin: 1%;
 }
 
 .categorie h2{
@@ -71,7 +75,18 @@ li{
     padding: 20px 20px;
 }
 
-
-.pefrect{
-    display: inline;
+span{
+    font-size: 16px;
+    color: #24515A;
 }
+
+figure{
+    margin: 2% 1%;
+    text-align: center;
+
+}
+
+figure img{
+    width: 100%;   
+}
+
