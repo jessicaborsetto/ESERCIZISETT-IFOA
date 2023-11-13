@@ -176,7 +176,13 @@ controllo()
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
 
-let giorno = newDate()
+function whatDayIsIt(){
+  const giorno = ["domenica", "lunedì", "martedì", "mercoledì","giovedì", "venerdì","sabato"];
+  let data = new Date();
+  return "Oggi è " + giorno[data.getDay()]
+}
+console.log('ESERCIZIO 7')
+console.log(whatDayIsIt())
 
 
 /* ESERCIZIO 8
@@ -195,6 +201,14 @@ let giorno = newDate()
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
+
+function howManyDays(){
+  let giorno = new Date();
+  let ggSet = giorno.getDay();
+  return ggSet
+}
+console.log('ESERCIZIO 7')
+console.log(whatDayIsIt())
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
