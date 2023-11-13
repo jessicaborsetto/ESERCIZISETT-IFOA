@@ -532,16 +532,32 @@ newEl()
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+function svuota(){
+  const svuota = document.getElementById('myList');
+  svuota.innerHTML = ''
+}
+
+svuota()
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
+/*
+così non funziona:
+
 function addClass() {
-  const addClass = document.getElementsByTagName('tr');
+  const addClass = document.querySelector('tr');
   addClass.classList.add('test');
 }
 
 addClass()
+*/
+
+//così si:
+const addClass = document.querySelector('tr');
+addClass.classList.add('test');
+
 
 // [EXTRA] JS Avanzato
 
