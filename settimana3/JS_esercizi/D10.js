@@ -198,21 +198,63 @@ console.log(whatDayIsIt())
   }
 */
 
+/*
+  function dice() {
+    let dado = Math.floor(Math.random() * 6) + 1;
+    return dado;
+  }
+*/
+
+function rollTheDices(num){
+  const valori = []
+  for (let i = 0; i < num; i++ ) {
+  valori.push(dice());
+  }
+
+  const sum = valori.reduce((totale, valoreX) => totale + valoreX, 0);
+
+  return {sum, valori}
+}
+
+const invoca = rollTheDices(4) //DICO LA LUNGHEZZA DELL'ARRAY VALORI 
+console.log('ESERCIZIO 8')
+console.log('i valori del lancio sono: ' + invoca.valori)
+console.log('la somma dei valori del lancio è: ' + invoca.sum)
+
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
-function howManyDays(){
-  let giorno = new Date();
-  let ggSet = giorno.getDay();
-  return ggSet
+const millisecondi1 = Date.parse('2023-11-01')
+const millisecondi2 = Date.parse('2023-11-13')
+
+function differenzaData(){
+  let diff = millisecondi2 - millisecondi1;
+  let calcolo = Math.floor(diff / (1000*60*60*24))
+  return calcolo
 }
-console.log('ESERCIZIO 7')
-console.log(whatDayIsIt())
+
+console.log('ESERCIZIO 9')
+console.log('sono passati: ' + differenzaData() + ' giorni tra il 1/11/23 e 13/11/23')
+
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+
+let data = new Date();
+let bDay = Date(2002, 11, 30)
+
+function verificaBD(){
+  if (data === bDay){
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log('ESERCIZIO 10')
+console.log(verificaBD())
 
 // Arrays & Oggetti
 
