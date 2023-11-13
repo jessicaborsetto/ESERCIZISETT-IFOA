@@ -2,3 +2,8 @@ td{
     border-collapse: collapse;
     border: 1px solid black;
 }
+
+.test{
+    font-size: 40px;
+    color: green;
+}
