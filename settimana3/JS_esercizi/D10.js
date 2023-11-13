@@ -382,6 +382,24 @@ const movies = [
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 
+const mioOggetto = {
+  nome: 'Jessica',
+  cognome: 'Borsetto',
+}
+
+function deleteProp (object, property){
+  if (object[property] !== undefined){
+    delete object[property]
+  }
+  return object
+}
+
+let propDaEliminare = 'cognome'
+
+console.log('ESERCIZIO 11')
+console.log(deleteProp(mioOggetto, propDaEliminare))
+
+
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
@@ -405,21 +423,49 @@ console.log(newestMovie(movies));
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 
+function countMovies(){
+  return movies.length;
+}
+
+console.log('ESERCIZIO 13')
+console.log(countMovies())
+
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
+
+const onlyTheYears = (array) => array.map((el) => `Anno: ${el.Year}`);
+
+console.log('ESERCIZIO 14')
+console.log(onlyTheYears(movies))
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
+const onlyInLastMillennium = (number) => number.filter((film) => parseInt(film.Year) < 2000)
+
+console.log('ESERCIZIO 15')
+console.log(onlyInLastMillennium(movies))
+
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
+const sumAllTheYears = (array) => {return array.reduce((accumulatore, film) => accumulatore + parseInt(film.Year),0);}
+
+console.log('ESERCIZIO 16')
+console.log(sumAllTheYears(movies))
+
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+
+const searchByTitle = (array, string) => {return array.filter((film) => film.Title.toLowerCase().includes(string.toLowerCase()))};
+
+console.log('ESERCIZIO 14')
+console.log(searchByTitle(movies, 'Lord'))
+
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
@@ -430,23 +476,44 @@ console.log(newestMovie(movies));
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
+
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
+function seleziona() {
+  document.getElementById('container');
+}
+seleziona()
+
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+
+function tabella(){
+  document.querySelectorAll('td')
+}
+tabella
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
+
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+
+function background(){
+  const link = document.querySelectorAll('a');
+  link.forEach((element) => {
+    element.style.backgroundColor = "red"
+  });
+};
+
+background();
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
