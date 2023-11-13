@@ -537,8 +537,8 @@ newEl()
 */
 
 function addClass() {
-  const newClass = document.getElementsByTagName('table > tr');
-  newClass.classList.add('test');
+  const addClass = document.getElementsByTagName('tr');
+  addClass.classList.add('test');
 }
 
 addClass()
@@ -557,6 +557,8 @@ addClass()
 
 */
 
+
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -572,5 +574,17 @@ addClass()
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+function isItPrime(n){
+  if (n%1 === 0 && n%n === 0) {
+    return n + ' è un numero primo'
+  } else {
+    return n + ' non è un numero primo'
+  }
+}
+console.log('ESERCIZIO 29')
+console.log(isItPrime(3))
+
+
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
