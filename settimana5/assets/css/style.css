@@ -24,7 +24,7 @@ nav{
 }
 
 header img{
-    width: 20%;
+    width: 15%;
 }
 
 ul{
@@ -67,11 +67,11 @@ button{
     transition-timing-function: ease-in-out;
 }
 
-button:hover{
+button .start :hover, button .read:hover{
     background-color: #000000;
 }
 
-button a {
+.start a, .read a {
     color: #fff;
 }
 
@@ -106,11 +106,7 @@ header, .stay_curious{
 .stay_curious svg{
     width: 100%;
     margin-top: 10%;
-    padding: 5%
-}
 
-main{
-    height: 100vh; 
 }
 
 .first_title{
@@ -189,7 +185,7 @@ h4{
     width: 35%;
 }
 
-time, .tempoLett, span{
+time, span{
     display: inline;
     color: #6B6B6B;
     margin: 0;
@@ -198,8 +194,113 @@ time, .tempoLett, span{
 .data_time{
     display: flex;
     align-items:center;
-    justify-content: space-between;
     color: #6B6B6B;
     width: 100%;
+}
+
+
+/*ARTICOLI + MENUFILTRI*/
+.home{
+    padding: 2% 18%;
+    background-color: #fff;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.elenco{
+    height: 100%;
+} 
+
+.articoli{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+
+
+
+h3{
+    margin: 0;
+}
+
+.articoli{
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imgArt{
+    width: 30%; 
+}
+article{
+    width: 60%;
+}
+
+article p{
+    margin-top: 2px;
+    color: #6B6B6B;
+}
+
+
+.categoria{
+    border-radius: 50px;
+    border: 0px;
+    background-color: #F2F2F2;
+    padding: 7px 12px;
+    margin: 5px;
+    color: #6B6B6B
+}
+
+.categoria a, .linkarium a{
+    color: #6B6B6B;
+}
+    
+.subInfo{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.whenWhat{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.whenWhat i{
+    font-size: 2px;
+}
+
+#stickyMenu{
+    width: 60%;
+}
+
+.topics{
+    position: sticky;
+    top: 100px;
+    margin-left: 50px;
+}
+
+.link{
+    margin: 10% 0;
+    padding-bottom: 10%;
+    font-size: smaller;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.link a{
+    color: #2A8A24;
+}
+
+.link a:hover{
+    color: #000000;
+}
+
+.linkarium{
+    font-size: smaller;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
