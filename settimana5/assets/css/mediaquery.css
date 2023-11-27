@@ -1,3 +1,5 @@
+/*non sono riuscita ad implementare questo css perchè il live server ha avuto grossi problemi di rendering :(*/
+
 html, body{
     margin: 0;
     padding: 0;
@@ -60,7 +62,7 @@ a{
     display: flex;
     gap: 10px;
     align-items: center;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 /*BOTTONI*/
@@ -73,7 +75,7 @@ a{
 .read{
     padding: 7px 15px;
     margin-top: 2%;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 button{
@@ -82,7 +84,7 @@ button{
     background-color: #191919;
     transition-duration: 0.7s;
     transition-timing-function: ease-in-out;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 button .start :hover, button .read:hover{
@@ -130,7 +132,7 @@ h1{
 }
 
 h2{
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1;
     margin-top: 0px;
@@ -149,14 +151,14 @@ h2{
 .trending h4{
     display: inline;
     margin-left: 20px;
-    font-size: 12px;
+    font-size: 17px;
 }
 
 
 h4{
     font-weight: 500;
     display: inline;
-    margin-left: 10px;
+    margin: 10px;
 }
 
 .title_classifica{
@@ -180,7 +182,7 @@ h4{
 }
 
 .info p, .time{
-    font-size: smaller;
+    font-size: 15px;
 }
 
 .profile{
@@ -213,7 +215,7 @@ time, span{
     align-items:center;
     color: #6B6B6B;
     width: 100%;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 
@@ -248,7 +250,7 @@ time, span{
 } */
 
 .linkarium{
-    font-size: smaller;
+    font-size: 13px;
     display: flex;
     flex-wrap: wrap;
     width: 90%;
@@ -298,7 +300,7 @@ h3{
 article p{
     margin-top: 2px;
     color: #6B6B6B;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 article{
@@ -335,7 +337,7 @@ article{
 }
 
 small{
-    font-size: 11px;
+    font-size: 15px;
 }
 
 small .data_time{
