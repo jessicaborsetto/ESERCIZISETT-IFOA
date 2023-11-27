@@ -206,6 +206,7 @@ time, span{
     align-items:center;
     color: #6B6B6B;
     width: 100%;
+    font-size: 10px;
 }
 
 
@@ -221,6 +222,10 @@ time, span{
     display: flex;
     margin: 0 auto;
     flex-wrap: wrap;
+}
+
+.bottons .categoria{
+    margin: 5px;
 }
 
 .topics {
@@ -243,7 +248,7 @@ time, span{
 
 
 .home{
-    padding: 1% 3%;
+    padding: 1% 2%;
     background-color: #fff;
     height: fit-content;
    
@@ -255,7 +260,7 @@ time, span{
 
 .articoli{
     width: 100vw;
-    height: fit-content;
+   
     display: flex;
 }
 
@@ -265,30 +270,36 @@ h3{
     margin: 0;
 }
 
-.articoli{
+ .articoli{
+    
     margin: 40px 0;
    
-    justify-content: space-evenly;
 }
 
 .imgArt{
-    width: 30%; 
+    width: 10%;
+    height: fit-content; 
 }
 
 
 article p{
     margin-top: 2px;
     color: #6B6B6B;
-font-size: 10px;
+    font-size: 10px;
 }
+
+article{
+    width: 50vw;
+}
+
 
 
 .categoria{
     border-radius: 50px;
     border: 0px;
     background-color: #F2F2F2;
-    padding: 7px 12px;
-    margin: 5px;
+    padding: 5px 7px;
+    margin: 0px;
     color: #6B6B6B
 }
 
@@ -300,15 +311,23 @@ font-size: 10px;
     display: flex;
     width: 100%;
     justify-content: space-between;
+   align-items: center;
 }
 
 .whenWhat{
     display: flex;
     width: 70%;
     justify-content: space-between;
+ 
 }
 
+small{
+    font-size: 11px;
+}
 
+small .data_time{
+    font-size: 7px;
+}
 
 }
 
