@@ -215,6 +215,9 @@ time, span{
     width: 100%;
     height: fit-content;
     display: flex;
+    margin: 40px 0;
+  
+    justify-content: space-evenly;
 }
 
 
@@ -223,11 +226,7 @@ h3{
     margin: 0;
 }
 
-.articoli{
-    margin: 40px 0;
-    display: flex;
-    justify-content: space-evenly;
-}
+
 
 .imgArt{
     width: 30%; 
