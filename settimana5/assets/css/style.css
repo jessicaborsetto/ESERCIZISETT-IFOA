@@ -1,0 +1,205 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    background-color: #FFC016;
+}
+
+/*HEADER*/
+header{
+    padding: 0.5% 18%;
+    background-color: #FFC016;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: 500ms;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between; 
+}
+
+header img{
+    width: 20%;
+}
+
+ul{
+    padding: 0;
+}
+
+ul li{
+    display: inline;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+.menu{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/*BOTTONI*/
+
+
+.start{
+    height: fit-content;
+    padding: 10px 20px;
+}
+
+.read{
+    padding: 10px 60px;
+    font-size: larger;
+    margin-top: 2%;
+}
+
+button{
+    border-radius: 50px;
+    border: 0px;
+    background-color: #191919;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+}
+
+button:hover{
+    background-color: #000000;
+}
+
+button a {
+    color: #fff;
+}
+
+li a {
+    color: #000000;
+}
+
+.active{
+    background-color: #fff;
+}
+
+.active button{
+    background-color: #2A8A24 ;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+} /*aggiungere animazione al bottone non all'hover*/
+
+.active button:hover{
+    background-color: #216E1C ;
+}
+
+
+/*STAY CURIOUS*/
+header, .stay_curious{
+    border-bottom: 1px solid #000000;
+}
+
+.stay_curious{
+    display: flex;
+    align-items: center;
+}
+.stay_curious svg{
+    width: 100%;
+    margin-top: 10%;
+    padding: 5%
+}
+
+main{
+    height: 100vh; 
+}
+
+.first_title{
+    padding: 5% 18%;
+    margin-top: 4.4%;
+} 
+
+h1{
+    font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 90px;
+    margin: 0;
+}
+
+h2{
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 30px;
+}
+
+/*MENU TRENDING*/
+.positions{
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 0;
+}
+.trending{
+    background-color: #fff;
+    padding: 2% 18%;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.trending h4{
+    display: inline;
+    margin-left: 20px;
+}
+
+h4{
+    font-weight: 500;
+}
+
+.title_classifica{
+    display: flex;
+    align-items: center;
+}
+
+.title_classifica h4{
+    margin: 0;
+}
+
+.number{
+    color: #F2F2F2;
+    font-weight: 600;
+    font-size: 30px;
+   margin: 0;
+}
+.info{
+    line-height:1.2;
+    width: 70%;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.profile img{
+    border-radius: 50%;
+    width: 10%;
+    margin-right: 10px;
+}
+
+.classifica{
+    display: flex;
+    align-items: first baseline;
+    justify-content: space-evenly;
+    width: 35%;
+}
+
+time, .tempoLett, span{
+    display: inline;
+    color: #6B6B6B;
+    margin: 0;
+}
+
+.data_time{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    color: #6B6B6B;
+    width: 100%;
+}
+
