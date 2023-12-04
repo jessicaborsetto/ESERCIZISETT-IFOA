@@ -223,9 +223,11 @@ h3{
 .campi p{
     display: inline;
 }
-.campi{
+.campi, .billingLink{
     width: 100%;
     display: flex;
+}
+.campi{
     justify-content: space-between;
 }
 .titleSection{
@@ -233,4 +235,8 @@ h3{
 }
 .sezione{
     width: 100%;
+}
+
+.billing{
+    justify-content: flex-end;
 }
