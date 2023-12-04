@@ -121,7 +121,7 @@ footer a:hover{
 }
 
 .profile{
-    padding:5% 30%;
+    padding:0% 30%;
 }
 h2{
     font-size: 70px;
@@ -166,12 +166,14 @@ h2, .nome, .maturity, .btnLanguages{
 .btnLanguages{
     background-color: #000;
     border: 2px solid #fff;
-    padding-right: 10%;
+    
+}
+.btnLanguages, .editBtn{
     border-radius:0;
 }
+
 .editBtn{
     letter-spacing: 3px;
-    border-radius:0;
 }
 .editBtn:hover{
     color: #141414;
@@ -187,4 +189,5 @@ h2, .nome, .maturity, .btnLanguages{
 }
 .maturity{
     background-color: #333333;
+    width: fit-content;
 }
