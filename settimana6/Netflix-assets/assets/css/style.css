@@ -198,6 +198,39 @@ h2{
 }
 .sMain{
     background-color: #fff;
-    padding: 2% 25%;
+    padding: 2% 15%;
     height: 100vh;
+}
+h3{
+   
+    font-size: 20px;
+}
+.subSection, h3{
+    color:#989898;
+}
+.cancel{
+    background-color: #E2E2E2;
+    border-radius: 0;
+    border: 2px solid #E2E2E2;
+    padding: 1% 6%;
+}
+.cancel:hover{
+    border: 2px solid #E2E2E2;
+}
+.membership{
+    display: flex;
+}
+.campi p{
+    display: inline;
+}
+.campi{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.titleSection{
+    width: 30%;
+}
+.sezione{
+    width: 100%;
 }
