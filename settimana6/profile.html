@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Netflix - Home Page</title>
+    <title>Netflix - Profile Page</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./Netflix-assets/assets/css/style.css" />
   </head>
 
-  <body class="px-4">
+  <body class="px-4 ombra">
     <header>
       <nav class="navbar navbar-expand-lg netflixNav">
         <a class="logoLink" href="#"><img src="./Netflix-assets/assets/netflix_logo.png"class="logo" alt=""/></a>
@@ -22,3 +22,74 @@
         </button>
         </nav>
     </header>
+
+
+    <main class="profile">
+        <h2>Edit Profile</h2>
+        <hr>
+
+        <div class="edit">
+            <img src="./Netflix-assets/assets/avatar.png" alt="">
+            <div class="info">
+                <div class="nome">
+                    <p class="utente">Pinco Pallino</p>
+                </div>
+
+                <div class="section">
+                    <p>Language:</p>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle btnLanguages" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          English &nbsp; &nbsp;
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="#">English</a></li>
+                          <li><a class="dropdown-item" href="#">Italian</a></li>
+                          <li><a class="dropdown-item" href="#">Spanish</a></li>
+                          <li><a class="dropdown-item" href="#">French</a></li>
+                        </ul>
+                      </div>
+                     
+                </div>
+                
+                <hr class="divider">
+
+                <div class="settings">
+                    <p class="section">Maturity Settings:</p>
+
+                    <p class="maturity"><b>ALL MATURITY RATINGS</b></p>
+                    <p class="text-white">Show titles od all maturity ratings for this profile</p>
+
+                    <button type="button" class="btn btn-outline-secondary editBtn">EDIT</button>
+                </div>
+
+                <hr class="divider">
+
+                <div class="controls">
+                    <p class="section">Autoplay Controls</p>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                      </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <hr>
+        <div class="buttons">
+            <button type="button" class="btn btn-outline-secondary editBtn"><b>SAVE</b></button>
+            <button type="button" class="btn btn-outline-secondary editBtn"><b>CANCEL</b></button>
+            <button type="button" class="btn btn-outline-secondary editBtn"><b>DELETE ACCOUNT</b></button>
+        </div>
+        
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
