@@ -191,3 +191,11 @@ h2, .nome, .maturity, .btnLanguages{
     background-color: #333333;
     width: fit-content;
 }
+
+/* setting------------------------------------------------------------------------------------------- */
+.hSettings{
+    background-color: #000;
+}
+.sMain{
+    background-color: #fff;
+}
