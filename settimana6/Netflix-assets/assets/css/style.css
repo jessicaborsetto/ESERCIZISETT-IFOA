@@ -126,7 +126,7 @@ footer a:hover{
 h2{
     font-size: 70px;
 }
-hr{
+.editProfile{
     margin: 2% 0;
     border: 0.5px solid #fff;
 }
@@ -141,7 +141,7 @@ hr{
 .nome{
     background-color: #666666;
 }
-h2, .nome, .maturity, .btnLanguages{
+.editProfile, .nome, .maturity, .btnLanguages{
     color: #fff;
 }
 .utente{
@@ -198,4 +198,6 @@ h2, .nome, .maturity, .btnLanguages{
 }
 .sMain{
     background-color: #fff;
+    padding: 2% 25%;
+    height: 100vh;
 }
