@@ -227,9 +227,10 @@ h3{
     width: 100%;
     display: flex;
 }
-.campi{
+.campi, .campi_user{
     justify-content: space-between;
 }
+
 .titleSection{
     width: 30%;
 }
@@ -239,4 +240,14 @@ h3{
 
 .billingLink{
     justify-content: flex-end;
+}
+.user, .campi_user{
+    display: flex;
+    align-items: center;
+}
+.user img{
+    width: 10%;
+}
+.user p{
+    margin: 0 3%;
 }
