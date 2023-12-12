@@ -33,9 +33,15 @@ const displayProducts = () => {
         listItem.innerHTML = `
             <input type="checkbox" id="${el._id}" value="${el._id}">
             <label for="${el._id}">${el.name} - $${el.price}</label>
-            <button class="btn btn-warning editBtn" onclick="editProduct('${el._id}')">Modifica</button> 
         `;
+
+        const editBtn = document.createElement("button");
+        editBtn.classList.add('editBtn', 'btn', 'btn-warning', 'col-2')
+        editBtn.setAttribute('onclick', `editProduct('${el._id}')`);
+        editBtn.innerText = 'Modifica';
+
         productList.appendChild(listItem);
+        listItem.appendChild(editBtn);
     });
 };
 

@@ -48,14 +48,17 @@
     <main class="container mt-4">
         <ul id="productList" class="list-group mt-3"></ul>
         <div class="mt-3">
-            <button type="button" class="btn btn-danger btn-sm" onclick="deleteSelectedProducts()">Delete Selected</button>
+            <button type="button" class="btn btn-danger btn-sm col-2 deleteBtn" onclick="deleteSelectedProducts()">Delete Selected</button>
         </div>
+
         <hr class="mb-4">
 
         <div class="col-10">
             <h1 class="mt-4 py-2">Nuovo Prodotto</h1>
         </div>
+
         <hr>
+
         <form id="productForm">
             <input type="hidden" id="editingProductId" />
             <div class="mb-3">
