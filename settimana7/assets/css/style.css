@@ -5,17 +5,35 @@
 
 .carta{
     width: 30%;
-    min-height: 50rem;
+    min-height: 30rem;
+    border: 0;
+    background-color: #eaeaea;
+    padding: 2%;
+    border-radius: 20px;
 }
 
 .cover{
     width: 100%;
+    margin: 2% auto;
+    height: 450px;
+    border-radius:10px ;
 }
 
-.editBtn, .deleteBtn{
+.editBtn, .deleteBtn, .detailBtn{
     font-weight: 500;
     padding: 0;
     font-size: 15px;
+}
+
+.detailBtn{
+    width: 40%;
+    padding: 2%;
+}
+
+.detailBtnDiv{
+    width: 100%;
+    display: flex;
+    justify-content: end;
 }
 
 li{
@@ -44,7 +62,7 @@ label{
     margin-bottom: 10%;
 }
 
-#homeButton{
+#homeButton, #goToEditPage{
     width: 100%;
     font-size: 20px;
     font-weight: 700;

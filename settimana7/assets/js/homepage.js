@@ -34,8 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
             let cardText = document.createElement('p');
             cardText.innerText  = el.description;
 
+            let detailBtnDiv = document.createElement('div');
+            detailBtnDiv.classList.add('detailBtnDiv');
+
+
             let detailBtn = document.createElement('button');
             detailBtn.classList.add('btn', 'btn-info');
+            detailBtn.classList.add('detailBtn');
             detailBtn.innerText  = 'Dettagli';
             detailBtn.setAttribute('id','./detailpage.html')
             detailBtn.setAttribute('id', el._id)
@@ -48,10 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
             card.appendChild(img);
             card.appendChild(cardBody);
         
+            detailBtnDiv.appendChild(detailBtn);
             cardBody.appendChild(cardTitle);
             cardBody.appendChild(cardBrand);
             cardBody.appendChild(cardText);
-            cardBody.appendChild(detailBtn);
+            card.appendChild(detailBtnDiv);
         
             document.querySelector('.mieiProdotti').appendChild(card);
         });

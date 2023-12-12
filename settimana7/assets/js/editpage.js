@@ -120,7 +120,7 @@ const resetForm = () => {
     document.getElementById("imageUrl").value = "";
 };
 
-const deleteProduct = async () => {
+const deleteSelectedProducts = async () => {
     const selectedProducts = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(input => input.value);
     if (selectedProducts.length === 0) {
         alert("seleziona il prodotto da eliminare");
@@ -128,8 +128,8 @@ const deleteProduct = async () => {
     }
 
     try {
-        const promises = selectedProducts.map(elId => {
-            return fetch(url + elId, {
+        const promises = selectedProducts.map(productId => {
+            return fetch(url + productId, {
                 method: "DELETE",
                 headers: headers
             });
@@ -137,7 +137,7 @@ const deleteProduct = async () => {
         await Promise.all(promises);
         getProducts();
     } catch (error) {
-        console.error("Ops! C'è un errore..", error);
+        console.error("c'è un problema con l'eliminazione del prodotto", error);
     }
 };
 
