@@ -45,7 +45,7 @@ const displayProducts = () => {
     });
 };
 
-// Aggiungi questa nuova funzione per gestire la modifica di un prodotto
+// Gestire modifica
 const editProduct = (elId) => {
     editingProductId = elId;
     const productToEdit = products.find(product => product._id === elId);
@@ -56,7 +56,7 @@ const editProduct = (elId) => {
     document.getElementById("brand").value = productToEdit.brand;
 };
 
-// Aggiungi questa funzione per annullare l'operazione di modifica
+// Annullare modifica
 const deleteEdit = () => {
     editingProductId = null;
     resetForm();
