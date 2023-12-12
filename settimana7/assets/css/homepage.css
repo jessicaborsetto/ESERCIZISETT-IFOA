@@ -1,0 +1,12 @@
+.libreriaProdotti{
+    flex-wrap: wrap;
+}
+
+.carta{
+    width: 30%;
+    min-height: 50rem;
+}
+
+.cover{
+    width: 100%;
+}
