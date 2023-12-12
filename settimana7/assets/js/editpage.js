@@ -26,6 +26,7 @@ const getProducts = async () => {
 
 const displayProducts = () => {
     const productList = document.getElementById("productList");
+    productList.classList.add('productList')
     productList.innerHTML = "";
 
     products.forEach(el => {
@@ -113,11 +114,12 @@ const addOrUpdateProduct = async () => {
     }
 };
 
-const resetForm = () => {
+const resetEdit = () => {
     document.getElementById("name").value = "";
     document.getElementById("description").value = "";
     document.getElementById("price").value = "";
     document.getElementById("imageUrl").value = "";
+    document.getElementById("brand").value = "";
 };
 
 const deleteSelectedProducts = async () => {

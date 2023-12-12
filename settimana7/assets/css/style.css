@@ -65,6 +65,10 @@
 }
 
 /* EDIT */
+.productList{
+    margin: 0;
+}
+
 li{
     display: flex;
     justify-content: space-between;
@@ -75,9 +79,11 @@ label{
     width: 80%;
 }
 
-.deleteBtn{
+.deleteBtn, .formBtn{
     padding: 1% 0;
     border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
 }
 
 #productForm{
@@ -88,7 +94,9 @@ label{
 
 .formBtn{
     width: 100%;
+    padding: 5% 0;
     margin-bottom: 10%;
+    
 }
 
 #homeButton, #goToEditPage{
