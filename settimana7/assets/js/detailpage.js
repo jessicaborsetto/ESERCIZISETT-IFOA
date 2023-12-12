@@ -32,11 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
     })
     .catch(error => console.error('Errore durante la richiesta Fetch:', error));
-
-    const homeButton = document.getElementById('goToHomePage');
+    const homeButton = document.getElementById('homeButton');
     homeButton.addEventListener('click', goToHomePage);
 });
-
 
 function goToHomePage() {
     window.location.href = "homepage.html";

@@ -58,6 +58,10 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .catch(error => console.error('Errore durante la richiesta Fetch:', error));
 
-    
+    const homeButton = document.getElementById('goToEditPage');
+    homeButton.addEventListener('click', goToEditPage);
 });
 
+function goToEditPage() {
+    window.location.href = "editpage.html";
+}
