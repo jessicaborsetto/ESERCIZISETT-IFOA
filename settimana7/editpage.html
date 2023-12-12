@@ -60,30 +60,32 @@
         <hr>
 
         <form id="productForm">
-            <input type="hidden" id="editingProductId" />
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Product name" />
+            <div class="inputs col-8">
+                <input type="hidden" id="editingProductId" />
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Product name" />
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" placeholder="Product description"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="price" placeholder="Product price" />
+                </div>
+                <div class="mb-3">
+                    <label for="imageUrl" class="form-label">Image URL</label>
+                    <input type="text" class="form-control" id="imageUrl" placeholder="Image URL" />
+                </div>
+                <div class="mb-3">
+                    <label for="brand" class="form-label">Brand</label>
+                    <input type="text" class="form-control" id="brand" placeholder="Product brand" />
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" id="description" placeholder="Product description"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="price" class="form-label">Price</label>
-                <input type="number" class="form-control" id="price" placeholder="Product price" />
-            </div>
-            <div class="mb-3">
-                <label for="imageUrl" class="form-label">Image URL</label>
-                <input type="text" class="form-control" id="imageUrl" placeholder="Image URL" />
-            </div>
-            <div class="mb-3">
-                <label for="brand" class="form-label">Brand</label>
-                <input type="text" class="form-control" id="brand" placeholder="Product brand" />
-            </div>
-            <div class="d-grid gap-2">
-                <button type="button" class="btn btn-primary btn-sm" onclick="addOrUpdateProduct()">Save</button>
-                <button type="button" class="btn btn-secondary btn-sm" onclick="cancelEdit()">Cancel</button>
+            <div class="buttons col-2">
+                <button type="button" class="btn btn-primary btn-sm formBtn" onclick="addOrUpdateProduct()">Save</button>
+                <button type="button" class="btn btn-secondary btn-sm formBtn" onclick="cancelEdit()">Cancel</button>
             </div>
         </form>
 

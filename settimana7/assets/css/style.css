@@ -31,3 +31,14 @@ label{
     padding: 1% 0;
     border-radius: 10px;
 }
+
+#productForm{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formBtn{
+    width: 100%;
+    margin-bottom: 10%;
+}
