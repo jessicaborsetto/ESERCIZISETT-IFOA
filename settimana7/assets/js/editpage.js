@@ -95,7 +95,7 @@ const addOrUpdateProduct = async () => {
         }
 
         if (!response.ok) {
-            throw new Error("C'è un problema col server! Riprova più tardi");
+            throw new Error("La risposta al server non è andata a buon fine ;( riprova più tardi");
         }
 
         const updatedProduct = await response.json();
@@ -113,6 +113,7 @@ const addOrUpdateProduct = async () => {
         console.error("Compila tutti i campi per favore", error);
     }
 };
+
 
 const resetEdit = () => {
     document.getElementById("name").value = "";
