@@ -23,13 +23,45 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .then(el => {
         // Visualizza i dettagli del prodotto nella pagina
-        const scheda = document.getElementById('product-details');
-        scheda.innerHTML = `
-        <img src="${el.imageUrl}" alt="${el.name}">
-        <h3>${el.name}</h3>
-        <h5>${el.brand}</h5>
-        <p>${el.description}</p>
-        `;
+        const detailForm = document.getElementById('product-details');
+        detailForm.classList.add('detailForm');
+
+        let formImg = document.createElement('img');
+        formImg.src = el.imageUrl;
+        formImg.classList.add('formImg');
+        
+        let infoForm = document.createElement('div');
+        infoForm.classList.add('infoForm');
+
+        let titleForm = document.createElement('h3');
+        titleForm.classList.add('titleForm');
+        titleForm.innerText = el.name;
+
+        let brandForm = document.createElement('h5');
+        brandForm.classList.add('brandForm');
+        brandForm.innerText = el.brand;
+
+        let descriptionForm = document.createElement('p');
+        descriptionForm.classList.add('descriptionForm');
+        descriptionForm.innerText = el.description;
+
+        let priceForm = document.createElement('p');
+        priceForm.classList.add('price');
+        priceForm.innerText = `$ ${el.price}`;
+
+
+        detailForm.appendChild(formImg)
+        detailForm.appendChild(infoForm)
+        
+        infoForm.appendChild(titleForm)
+        infoForm.appendChild(brandForm)
+        infoForm.appendChild(descriptionForm)
+        infoForm.appendChild(priceForm)
+
+
+        document.querySelector('detailForm').appendChild(detailForm);
+
+
     })
     .catch(error => console.error('Errore durante la richiesta Fetch:', error));
     const homeButton = document.getElementById('homeButton');

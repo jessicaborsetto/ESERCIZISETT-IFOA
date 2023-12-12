@@ -3,13 +3,22 @@
     flex-wrap: wrap;
 }
 
+/* DETAILS E CARTE */
 .carta{
     width: 30%;
     min-height: 30rem;
     border: 0;
-    background-color: #eaeaea;
     padding: 2%;
+}
+
+.detailForm, .carta{
+    background-color: #eaeaea;
     border-radius: 20px;
+}
+
+.detailForm{
+    margin-top: 2%;
+    display: flex;
 }
 
 .cover{
@@ -36,6 +45,26 @@
     justify-content: end;
 }
 
+.formImg{
+    width: 250px;
+    height: 350px;
+    margin-right: 70px;
+}
+
+.infoForm, .formImg{
+    padding: 20px;
+}
+
+#product-details{
+    margin: 2% 0;
+}
+
+.price{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* EDIT */
 li{
     display: flex;
     justify-content: space-between;

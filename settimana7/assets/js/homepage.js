@@ -34,9 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
             let cardText = document.createElement('p');
             cardText.innerText  = el.description;
 
+            let cardPrice = document.createElement('p');
+            cardPrice.classList.add('price');
+            cardPrice.innerText = `$${el.price}`;
+
             let detailBtnDiv = document.createElement('div');
             detailBtnDiv.classList.add('detailBtnDiv');
-
 
             let detailBtn = document.createElement('button');
             detailBtn.classList.add('btn', 'btn-info');
@@ -57,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
             cardBody.appendChild(cardTitle);
             cardBody.appendChild(cardBrand);
             cardBody.appendChild(cardText);
+            cardBody.appendChild(cardPrice);
+
             card.appendChild(detailBtnDiv);
         
             document.querySelector('.mieiProdotti').appendChild(card);
