@@ -10,3 +10,8 @@
 .cover{
     width: 100%;
 }
+
+.editBtn{
+    font-weight: 500;
+    padding: 0;
+}
