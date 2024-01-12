@@ -11,21 +11,8 @@ main, footer{
 .gallery{  
   display: flex;
   justify-content: space-between;
-  /* overflow-x: scroll; */
   margin-bottom: 40px;
 }
-
-/* .moviePoster{
-  width: 10%;
-  margin: 15px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.2s;
-}
-
-.moviePoster:hover {
-  transform: scale(1.1);
-} */
 
 .movie-poster-container {
   width: 350px;
@@ -102,7 +89,6 @@ footer {
 .footer-icon {
   font-size: 1.3em;
   margin: 5% 1%;
-  
 }
 
 .footer-links a {
