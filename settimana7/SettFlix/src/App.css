@@ -1,0 +1,115 @@
+#root {
+  margin: 0;
+  background-color: #221f1f;
+}
+
+main{
+  padding: 20px;
+  margin-top: 60px;
+  background-color: #fff;
+}
+
+.logoNetflix{
+  width:5%;
+}
+
+.customNav{
+  background-color: #141313;
+  padding-inline: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.profilePic img{
+  width: 40px;
+  height: 40px;
+}
+
+.menuNav{
+  font-weight: 600;
+  color: #757575;
+  margin-inline:20px ;
+}
+
+.menuNav:hover, .footer-links a:hover{
+  color: #fff;
+}
+
+/* SETTINGS */
+
+.hSettings{
+  background-color: #000;
+}
+
+.account{
+  font-size: 60px;
+}
+
+.titleSection{
+  width: 30%;
+}
+
+.titleSection h3{
+  color:#989898;
+  font-size: 20px;
+}
+
+.sMain{
+  padding: 2% 15%;
+}
+
+.sMain a{
+  text-decoration: none;
+}
+
+.subSection, h3{
+  color:#989898;
+}
+.cancel{
+  background-color: #E2E2E2;
+  border-radius: 0;
+  border: 2px solid #989898;
+  padding: 1% 6%;
+}
+
+.cancel:hover{
+  border: 2px solid #989898;
+}
+
+.membership{
+  display: flex;
+}
+.campi p{
+  display: inline;
+}
+.campi, .billingLink{
+  width: 100%;
+  display: flex;
+}
+.campi, .campi_user{
+  justify-content: space-between;
+}
+
+
+.sezione{
+  width: 100%;
+}
+
+.billingLink{
+  justify-content: flex-end;
+}
+.user, .campi_user{
+  display: flex;
+  align-items: center;
+}
+.user img{
+  width: 10%;
+}
+.user p{
+  margin: 0 3%;
+}
