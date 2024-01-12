@@ -1,40 +1,56 @@
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from '../assets/logo.png'
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import logo from "../assets/logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch, faBell } from "@fortawesome/free-solid-svg-icons";
+
 
 function CustomNavbar() {
   return (
-    <Navbar expand="lg" className="bg-body-dark " >
-      <div className='fluid d-flex align-center m-0'>
-      <img src={logo} alt="Logo" className="logoNetflix"></img>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home" className='text-white'>Home</Nav.Link>
-            <Nav.Link href="#link" className='text-white'>TV Shows</Nav.Link>
-            <Nav.Link href="#link" className='text-white'>Movies</Nav.Link>
-            <Nav.Link href="#link" className='text-white'>Recently Added</Nav.Link>
-            <Nav.Link href="#link" className='text-white'>My List</Nav.Link>
-            
-            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown" className='text-white'>
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown> */}
+    <Navbar className="py-0 d-flex justify-content-between">
+      <div className="customNav">
+        <div className="leftNav">
+          <div className="fluid d-flex align-center m-0 py-2">
+            <img src={logo} alt="Logo" className="logoNetflix"></img>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <a href="#home" className="menuNav">
+                  <b>Home</b>
+                </a>
+                <a href="#link" className="menuNav">
+                  TV Shows
+                </a>
+                <a href="#link" className="menuNav">
+                  Movies
+                </a>
+                <a href="#link" className="menuNav">
+                  Recently Added
+                </a>
+                <a href="#link" className="menuNav">
+                  My List
+                </a>
+              </Nav>
+            </Navbar.Collapse>
+          </div>
+        </div>
 
-          </Nav>
-        </Navbar.Collapse>
+        <div className="rightNav">
+          <div className="text-white d-flex align-items-center">
+            
+            <FontAwesomeIcon icon={faSearch} className="mr-2 mx-4" />
+            <FontAwesomeIcon icon={faBell} className="mr-2 mx-4" />
+            <div className="mx-4 profilePic">
+              <img
+                src="https://i1.sndcdn.com/artworks-4OjnhFcpDrq2sYlZ-upTzRw-t500x500.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </Navbar>
   );
 }
 
 export default CustomNavbar;
-

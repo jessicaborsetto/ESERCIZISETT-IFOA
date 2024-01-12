@@ -3,6 +3,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
 import Movies from './components/Movies';
+import Dropbtn from './components/Dropdown';
 
 function App() {
 //aggiungere lo stato dei film = prima è vuoto
@@ -49,23 +50,30 @@ useEffect(()=>{
 )
 
   return (
+
     <>
       <Navbar></Navbar>
-      <h2 className='mx-4 mt-4 text-white'>Tempo di partire per Mordor con i bros&#129501;</h2>
+    <main className='text-white'>
+      <div className='d-flex'>
+        <h2>TV Shows</h2>
+        <Dropbtn variant="dark"></Dropbtn>
+      </div>
+
+      <h4 className=' mt-4'>Tempo di partire per Mordor con i bros&#129501;</h4>
         <div className='gallery'>
           <Movies movies={moviesLOTR}></Movies>
         </div>
 
-        <h2 className='mx-4 mt-4 text-white'>Voglia di supereroi?&#129464;</h2>
+        <h4 className=' mt-4'>Voglia di supereroi?&#129464;</h4>
         <div className='gallery'>
           <Movies movies={moviesMarvel}></Movies>
         </div>
 
-        <h2 className='mx-4 mt-4 text-white'>Aggiungi un po' di magia&#10024;</h2>
+        <h4 className=' mt-4'>Aggiungi un po' di magia&#10024;</h4>
         <div className='gallery'>
           <Movies movies={moviesHp}></Movies>
         </div>
-      
+    </main>
     </>
   )
 }
