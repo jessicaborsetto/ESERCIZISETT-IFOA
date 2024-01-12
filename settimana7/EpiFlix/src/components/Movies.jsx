@@ -1,14 +1,51 @@
+// import React from "react";
+
+// const Movies = (props) => {
+//     return(
+//         <>
+//         {props.movies.map((movie, index) =>(
+//             <img className="moviePoster" src={movie.Poster} alt="movie" key={index}></img>
+//         )
+//         )}
+//         </>
+//     )
+// }
+
+// export default Movies
+
+
 import React from "react";
+import { Carousel } from 'react-bootstrap';
 
 const Movies = (props) => {
-    return(
-        <>
-        {props.movies.map((movie, index) =>(
-            <img className="moviePoster" src={movie.Poster} alt="movie" key={index}></img>
-        )
-        )}
-        </>
-    )
-}
+    const moviesPerRow = 5;
+    const items = [];
 
-export default Movies
+    for (let i = 0; i < props.movies.length; i += moviesPerRow) {
+        const movieGroup = props.movies.slice(i, i + moviesPerRow);
+
+        items.push(
+            <Carousel.Item key={i} className="movie-carousel-item movieCarousel">
+                <div className="d-flex justify-content-between movieCarousel">
+                    {movieGroup.map((movie, index) => (
+                        <div key={index} className="movie-poster-container">
+                            <img
+                                src={movie.Poster}
+                                alt={movie.Title}
+                                className="movie-poster"
+                            />
+                        </div>
+                    ))}
+                </div>
+            </Carousel.Item>
+        );
+    }
+
+    return (
+        <Carousel interval={null} className=" movieCarousel">
+            {items}
+        </Carousel>
+    );
+};
+
+export default Movies;
