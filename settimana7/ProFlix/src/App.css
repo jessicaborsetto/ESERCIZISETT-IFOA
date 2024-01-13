@@ -9,38 +9,6 @@
   margin-left: 20px;
 }
 
-.customNav{
-  background-color: #141313;
-  padding-inline: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 2;
-}
-
-.profilePic img{
-  width: 40px;
-  height: 40px;
-}
-
-.menuNav{
-  font-weight: 600;
-  color: #757575;
-  margin-inline:20px ;
-  text-decoration: none;
-
-}
-
-.menuNav:hover, .footer-links a:hover{
-  color: #fff;
-}
-
-.navIcons{
-  color: #fff;
-  font-size: 30px;
-}
-
 /* PROFILE PAGE */
 
 .profile{
@@ -96,7 +64,6 @@ h2{
   border-radius:0;
   letter-spacing: 3px;
 }
-
 
 .editBtn:hover{
   color: #141414;

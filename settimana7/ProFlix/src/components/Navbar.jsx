@@ -6,7 +6,7 @@ import logo from "../assets/logo.png";
 
 function CustomNavbar() {
   return (
-    <Navbar className="py-0 d-flex justify-content-between">
+    <Navbar>
        <img src={logo} alt="Logo" className="logoNetflix"></img>
     </Navbar>
   );
