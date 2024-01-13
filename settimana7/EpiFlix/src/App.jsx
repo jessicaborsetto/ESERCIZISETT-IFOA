@@ -31,6 +31,7 @@ useEffect(()=>{
 }, []
 )
 
+
 const getMoviesMarvel = async () => {
   const urlSeriesMarvel = 'https://www.omdbapi.com/?apikey=3dd63da1&s=avengers';
   const response = await fetch(urlSeriesMarvel);
