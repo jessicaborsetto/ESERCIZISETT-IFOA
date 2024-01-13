@@ -14,7 +14,7 @@ main, footer{
   margin-bottom: 40px;
 }
 
-.movie-poster-container {
+.movieContainer {
   width: 350px;
   height: 200px;
   margin: 10px;
@@ -23,7 +23,7 @@ main, footer{
   transition: transform 0.2s;
 }
 
-.movie-poster-container:hover {
+.movieContainer:hover {
   transform: scale(1.1);
 }
 
@@ -45,7 +45,7 @@ main, footer{
   align-items: center;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 .profilePic img{
@@ -111,4 +111,23 @@ footer {
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+
+/* movie title hover */
+.movieTitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.movieContainer:hover .movieTitle {
+  opacity: 1;
 }
