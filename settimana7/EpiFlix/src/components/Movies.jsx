@@ -3,7 +3,7 @@ import { Carousel } from 'react-bootstrap';
 
 const Movies = (props) => {
     const moviesPerRow = 5;
-    const films = [];
+    const items = [];
 
     // stato per far mostrare il titolo all'hover del mouse
     const [hoveredMovie, setHoveredMovie] = React.useState(null);
@@ -11,7 +11,7 @@ const Movies = (props) => {
     for (let i = 0; i < props.movies.length; i += moviesPerRow) {
         const movieGroup = props.movies.slice(i, i + moviesPerRow);
 
-        films.push(
+        items.push(
             <Carousel.Item key={i} className="movie-carousel-item movieCarousel">
                 <div className="d-flex justify-content-between movieCarousel">
                     {movieGroup.map((movie, index) => (
