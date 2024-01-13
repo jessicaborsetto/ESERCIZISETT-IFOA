@@ -104,3 +104,11 @@ footer {
 .copyright {
   font-size: 0.6em;
 }
+
+/* Loading.. */
+.loading{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
