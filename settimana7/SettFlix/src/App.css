@@ -1,6 +1,5 @@
 #root {
   margin: 0;
-  background-color: #221f1f;
 }
 
 main{
@@ -8,6 +7,7 @@ main{
   margin-top: 60px;
   background-color: #fff;
 }
+
 
 .logoNetflix{
   width:5%;
@@ -34,6 +34,8 @@ main{
   font-weight: 600;
   color: #757575;
   margin-inline:20px ;
+  text-decoration: none;
+
 }
 
 .menuNav:hover, .footer-links a:hover{
@@ -41,23 +43,6 @@ main{
 }
 
 /* SETTINGS */
-
-.hSettings{
-  background-color: #000;
-}
-
-.account{
-  font-size: 60px;
-}
-
-.titleSection{
-  width: 30%;
-}
-
-.titleSection h3{
-  color:#989898;
-  font-size: 20px;
-}
 
 .sMain{
   padding: 2% 15%;
@@ -67,46 +52,65 @@ main{
   text-decoration: none;
 }
 
-.subSection, h3{
-  color:#989898;
-}
-.cancel{
-  background-color: #E2E2E2;
-  border-radius: 0;
-  border: 2px solid #989898;
-  padding: 1% 6%;
-}
-
-.cancel:hover{
-  border: 2px solid #989898;
+.account{
+  font-size: 60px;
 }
 
 .membership{
   display: flex;
 }
-.campi p{
-  display: inline;
+
+.titleSection, .subSection{
+  width: 30%;
+  color:#989898;
+
 }
+
+/* BUTTON */
+.cancel{
+  background-color: #E2E2E2;
+  border-radius: 0;
+  border: 2px solid #E2E2E2;
+  padding: 1% 6%;
+  color:#141313
+}
+
+.cancel:hover{
+  background-color: #fff;
+}
+/* end button------- */
+
 .campi, .billingLink{
   width: 100%;
   display: flex;
-}
-.campi, .campi_user{
-  justify-content: space-between;
-}
-
-
-.sezione{
-  width: 100%;
 }
 
 .billingLink{
   justify-content: flex-end;
 }
-.user, .campi_user{
+
+.campi, .campi_user{
+  justify-content: space-between;
+}
+
+.campi p {
+  margin: 0;
+}
+
+.sezione{
+  width: 100%;
+}
+
+.user, .campiUser{
   display: flex;
   align-items: center;
+  width: 100%;
 }
+
+.campiUser a {
+  text-align: end;
+}
+
 .user img{
   width: 10%;
 }

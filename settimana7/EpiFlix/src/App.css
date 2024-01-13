@@ -57,6 +57,8 @@ main, footer{
   font-weight: 600;
   color: #757575;
   margin-inline:20px ;
+  text-decoration: none;
+
 }
 
 .menuNav:hover, .footer-links a:hover{

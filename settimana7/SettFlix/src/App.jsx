@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
@@ -10,9 +9,8 @@ function App() {
 
   return (
     <>
-   <Navbar></Navbar>
-   <Settings></Settings>
-
+    <Navbar></Navbar>
+    <Settings></Settings>
     </>
   )
 }
