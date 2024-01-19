@@ -18,7 +18,7 @@ function Search({ onSearch }) {
     name: "",
     sys: [{ country: "", sunrise: "", sunset: "" }],
     main: [{ temp: "", feels_like: "", humidity: "", temp_min:"", temp_max:"" }],
-    weather: [{ main: "", description: "" }],
+    weather: [{ description: "" }],
     wind: [{speed:""}],
   });
 
@@ -89,7 +89,7 @@ function Search({ onSearch }) {
           <span>{weather.sys.country}</span>
         </div>
 
-        <hr />
+        <hr  />
 
         {/* TEMPERATURE */}
         <div className="d-flex align-items-center my-2">
@@ -116,7 +116,7 @@ function Search({ onSearch }) {
 
         {/* WIND */}
         <div className="d-flex align-items-center my-2">
-        <i class="bi bi-wind me-4"></i>
+        <i className="bi bi-wind me-4"></i>
           {weather.wind.speed !== "" && <p className="m-0">  Wind: {weather.wind.speed} km/h</p>}
         </div>
 
@@ -140,7 +140,7 @@ function Search({ onSearch }) {
 
         {/* CONDITION */}
         {weather.weather[0].main !== "" && (
-          <p className="m-0"> {weather.weather[0].main}: {weather.weather[0].description}</p>
+          <p className="m-0"> Description: {weather.weather[0].description}</p>
         )}
 
       </div>

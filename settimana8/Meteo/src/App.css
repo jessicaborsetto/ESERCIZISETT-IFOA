@@ -27,7 +27,8 @@
 .input{
   padding: 10px 20px;
   font-weight: 600;
-  background-color: #FDF1B5;
+  background-color: #B5E3CF;
+
   border:0;
 }
 
@@ -62,28 +63,42 @@
 }
 
 .forecast{
-  width: 60%;
-  background-color: #FDF1B5;
+  width: 70%;
+  background-color: #B5E3CF;
   border-radius: 20px;
-  padding: 2%;
+  margin-left: 2%;
+  padding: 3%;
   box-shadow: 8px 6px 17px 5px rgba(0,0,0,0.26)
-
 }
 
 .accordion{
   height: 40vh;
-  margin: 25px 0;
+  margin: 10px 0;
   overflow-y: scroll;
   border-radius: 20px;
+  border: 1px solid #111111;
 }
 
 .grafic{
   width: 100%;
-  height: 30%;
+  display: flex;
+  justify-content: center;
 }
-
-
   
 .chartStyles{
   width: 100%;
+}
+
+.title{
+  color: #111111;
+  text-align: left;
+  font-size: 20px;
+}
+
+.dayAcc{
+  text-align: left;
+}
+
+.accordion::-webkit-scrollbar {
+  display: none;
 }
