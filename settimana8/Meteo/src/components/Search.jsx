@@ -2,36 +2,56 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
-import Forecast from "./Forecast";
 import Data from "./Data";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faLocationDot, faTemperatureHalf } from '@fortawesome/free-solid-svg-icons';
 
-
-function Search() {
+function Search({ onSearch }) {
   const api = {
-    key: "bd3aaad6e199db47143456ac727463c5",
+    key: "60500f103a9cf146bfe136985271a802",
     base: "http://api.openweathermap.org/data/2.5/",
   };
 
-  //stato per la search bar
+  // Stato per la search bar
   const [search, setSearch] = useState("");
+  const [error, setError] = useState("");  // Assicurati che questa riga sia presente
+
   const [weather, setWeather] = useState({
     name: "",
-    main: { temp: "" },
+    sys: [{ country: "", sunrise: "", sunset: "" }],
+    main: [{ temp: "", feels_like: "", humidity: "" }],
     weather: [{ main: "", description: "" }],
   });
 
   const searchCity = async () => {
+    if (search.trim() === "") {
+      setError("Please enter a city name.");
+      return;
+    }
+
     try {
       const response = await fetch(
         `${api.base}weather?q=${search}&units=metric&appid=${api.key}`
       );
       const result = await response.json();
-      setWeather(result);
+
+      if (result.name === undefined) {
+        setError();
+      } else {
+        setWeather(result);
+        onSearch(search);
+        setError("");
+      }
     } catch (error) {
       console.error("Error fetching data:", error);
+      setError();
     }
+  };
+
+  const formatTime = (timestamp) => {
+    const date = new Date(timestamp * 1000);
+    const hours = date.getHours();
+    const minutes = ("0" + date.getMinutes()).slice(-2);
+    const seconds = ("0" + date.getSeconds()).slice(-2);
+    return `${hours}:${minutes}:${seconds}`;
   };
 
   return (
@@ -39,39 +59,74 @@ function Search() {
       <Navbar className="navBar">
         <Data className="CurrentData"></Data>
         <div className="d-flex justify-content-between align-items-center search">
-            <div>
-                <Form className="d-flex">
-                    <Form.Control
-                    type="search"
-                    placeholder="Search the city"
-                    className="me-2 input rounded-pill"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    />
-                    <Button variant="outline-dark" onClick={searchCity} className="rounded-circle">
-                    <i className="bi bi-search searchIcon"></i>
-                    </Button>
-                </Form>
-            </div>
+          <div>
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Search the city"
+                className="me-2 input rounded-pill"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+              <Button variant="outline-dark" onClick={searchCity} className="rounded-circle">
+                <i className="bi bi-search searchIcon"></i>
+              </Button>
+            </Form>
+          </div>
         </div>
+        <div className="error-message">
+            {error && <p className="m-0 text-danger">{error}</p>}
+          </div>
       </Navbar>
 
       <div className="myWeather">
-      {/* LOCATION */}
-      <h2>{weather.name}</h2>
-      {/* TEMPERATURE */}
-        <hr />
-      {weather.main.temp !== "" && <p>  Temperature: {weather.main.temp}°C</p>}
-      {/* CONDITION */}
-      {weather.weather[0].main !== "" && (
-        <p>{weather.weather[0].main}: {weather.weather[0].description}</p>
-        )}
 
-        {/* AGGIUNGERE PERCEPITA E UMIDITA */}
-
+        {/* LOCATION */}
+        <div>
+          <h2>{weather.name}</h2>
+          <span>{weather.sys.country}</span>
         </div>
 
-      <Forecast search={search}></Forecast>
+        <hr />
+
+        {/* TEMPERATURE */}
+        <div className="d-flex align-items-center my-2">
+          <i className="bi bi-thermometer-half me-4"></i>
+          {weather.main.temp !== "" && <p className="m-0">  Temperature: {weather.main.temp}°C</p>}
+          {weather.main.feels_like !== "" && <small className="m-y mx-4">Feels like: {weather.main.feels_like}°C</small>}
+        </div>
+
+        {/* UMIDITA */}
+        <div className="d-flex align-items-center my-2">
+          <i className="bi bi-moisture me-4"></i>
+          {weather.main.humidity !== "" && <p className="m-0">  Humidity: {weather.main.humidity}°C</p>}
+        </div>
+
+        {/* SUNRISE */}
+        <div className="d-flex align-items-center my-2">
+          <i className="bi bi-sunrise-fill me-4"></i>
+          {weather.sys.sunrise !== "" && (
+            <p className="m-0"> Sunrise: {formatTime(weather.sys.sunrise)}</p>
+          )}
+        </div>
+
+
+        {/* SUNSET */}
+        <div className="d-flex align-items-center my-2">
+          <i className="bi bi-sunset-fill me-4"> </i>
+          {weather.sys.sunset !== "" && (
+            <p className="m-0"> Sunset: {formatTime(weather.sys.sunset)}</p>
+          )}
+        </div>
+
+
+        {/* CONDITION */}
+        {weather.weather[0].main !== "" && (
+          <p className="m-0"> {weather.weather[0].main}: {weather.weather[0].description}</p>
+        )}
+
+      </div>
+
     </>
   );
 }

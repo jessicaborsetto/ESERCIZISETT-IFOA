@@ -5,34 +5,36 @@
   text-align: center;
   margin: 0;
   width: 100%;
-  background-color: #fdfdfd;
+  background-color: #FDF1B5;
+  color: #d5d5d5;
   font-family: 'Nunito', sans-serif;
 }
 
 .search{
-  width: 100%;
   padding-inline: 20px;
 }
 
 .navBar{
   padding: 1% 2%;
+  background-color: rgb(32, 32, 32);
+  box-shadow: 8px 6px 17px 5px rgba(0,0,0,0.26);
+
+  border-radius: 20px;
 }
 
 .input{
   padding: 10px 20px;
   font-weight: 600;
   background-color: #FDF1B5;
-  border: 1px solid #FDF1B5;
+  border:0;
 }
 
 .CurrentData{
-  width: 10%;
+  width: 20%;
   text-align: left;
 }
 
 .myWeather{
-  width: 25%;
-  color: #d5d5d5;
   text-align: start;
   margin-top: 40px;
   padding: 15px;
@@ -49,5 +51,20 @@
 .searchIcon{
   font-size: 20px;
   padding: 0;
+  color: #d5d5d5;
 }
 
+.city{
+  width: 40%;
+  background-color: rgb(17, 17, 17);
+}
+
+.city, .forecast{
+  padding: 2%;
+}
+
+.forecast{
+  width: 60%;
+  height: 100vh;
+  overflow-y: scroll;
+}

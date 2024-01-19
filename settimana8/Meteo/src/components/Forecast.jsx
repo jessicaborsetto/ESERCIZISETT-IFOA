@@ -5,15 +5,14 @@ function Forecast({search}) {
     const [forecast, setForecast] = useState(null);
 
     const apiForecast = {
-        key: "bd3aaad6e199db47143456ac727463c5",
+        key: "60500f103a9cf146bfe136985271a802",
         base: "http://api.openweathermap.org/data/2.5/",
       };
-  
-      // http://api.openweathermap.org/geo/1.0/direct?q=London&units=metric&appid=bd3aaad6e199db47143456ac727463c5
 
     useEffect(() => {
       const fetchData = async () => {
         try {
+
           const response = await fetch(
             `${apiForecast.base}forecast?q=${search}&units=metric&appid=${apiForecast.key}`
           );
@@ -21,15 +20,15 @@ function Forecast({search}) {
           const currentDate = new Date();
   
           // Filtra le previsioni che corrispondono ai prossimi 7 giorni
-          const filteredForecast = result.list.filter((forecastItem) => {
+          const filteredForecast = (result.list ?? []).filter((forecastItem) => {
             const forecastDate = new Date(forecastItem.dt_txt);
             const timeDifference = forecastDate.getTime() - currentDate.getTime();
             const daysDifference = timeDifference / (1000 * 3600 * 24);
-  
+          
             // Mostra solo le previsioni per i prossimi 7 giorni
             return daysDifference >= 0 && daysDifference < 7;
           });
-  
+          
           setForecast(filteredForecast);
         } catch (error) {
           console.error("Error fetching data:", error);
@@ -40,7 +39,7 @@ function Forecast({search}) {
     }, [search]);
   
     return (
-      <Accordion defaultActiveKey="0" className="container">
+      <Accordion defaultActiveKey="0">
         {forecast &&
           forecast.map((forecastItem, index) => (
             <Accordion.Item key={index} eventKey={index.toString()}>
