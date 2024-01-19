@@ -48,13 +48,13 @@ function Forecast({ search }) {
     <>
 
       {/* GRAFICO */}
+      <h3>Temperature:</h3>
       <LineChart width={700} height={300} data={data}>
         <XAxis dataKey="name" />
         <YAxis />
         <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
         <Line type="monotone" dataKey="temperature" stroke="#968d5f" />
         <Tooltip />
-        <Legend />
       </LineChart>
 
       <Accordion defaultActiveKey="0" className="Accordion">

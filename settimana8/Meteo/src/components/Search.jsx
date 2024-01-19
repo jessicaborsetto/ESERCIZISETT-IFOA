@@ -17,7 +17,7 @@ function Search({ onSearch }) {
   const [weather, setWeather] = useState({
     name: "",
     sys: [{ country: "", sunrise: "", sunset: "" }],
-    main: [{ temp: "", feels_like: "", humidity: "", temp_min:"", temp_min:"" }],
+    main: [{ temp: "", feels_like: "", humidity: "", temp_min:"", temp_max:"" }],
     weather: [{ main: "", description: "" }],
     wind: [{speed:""}],
   });
@@ -34,7 +34,7 @@ function Search({ onSearch }) {
       );
       const result = await response.json();
 
-      if (result.name === undefined) {
+      if (result.name === undefined || !result.name) {
         setError();
       } else {
         setWeather(result);
@@ -98,10 +98,26 @@ function Search({ onSearch }) {
           {weather.main.feels_like !== "" && <small className="m-y mx-4">Feels like: {weather.main.feels_like}°C</small>}
         </div>
 
+        <div className="d-flex align-items-center my-2">
+          <i className="bi bi-thermometer me-4"></i>
+          {weather.main.temp_min !== "" && <p className="m-0">  Lowest temperature: {weather.main.temp_min}°C</p>}
+        </div>
+
+        <div className="d-flex align-items-center my-2">
+          <i className="bi bi-thermometer-high me-4"></i>
+          {weather.main.temp_max !== "" && <p className="m-0"> Max temperature: {weather.main.temp_max}°C</p>}
+        </div>
+
         {/* UMIDITA */}
         <div className="d-flex align-items-center my-2">
           <i className="bi bi-moisture me-4"></i>
           {weather.main.humidity !== "" && <p className="m-0">  Humidity: {weather.main.humidity}°C</p>}
+        </div>
+
+        {/* WIND */}
+        <div className="d-flex align-items-center my-2">
+        <i class="bi bi-wind me-4"></i>
+          {weather.wind.speed !== "" && <p className="m-0">  Wind: {weather.wind.speed} km/h</p>}
         </div>
 
         {/* SUNRISE */}
