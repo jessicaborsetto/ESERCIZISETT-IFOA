@@ -64,6 +64,7 @@
 
 .forecast{
   width: 70%;
+  height: 100%;
   background-color: #B5E3CF;
   border-radius: 20px;
   margin-left: 2%;
@@ -71,18 +72,11 @@
   box-shadow: 8px 6px 17px 5px rgba(0,0,0,0.26)
 }
 
-.accordion{
-  height: 40vh;
-  margin: 10px 0;
-  overflow-y: scroll;
-  border-radius: 20px;
-  border: 1px solid #111111;
-}
-
 .grafic{
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
   
 .chartStyles{
@@ -99,6 +93,9 @@
   text-align: left;
 }
 
-.accordion::-webkit-scrollbar {
-  display: none;
+.card{
+  width: 18rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }

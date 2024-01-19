@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Accordion from "react-bootstrap/Accordion";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
+// import Accordion from "react-bootstrap/Accordion";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid } from "recharts";
+import SingleDay from "./SingleDay";
 
 function Forecast({ search }) {
   const [forecast, setForecast] = useState(null);
@@ -48,9 +49,9 @@ function Forecast({ search }) {
     <>
 
       {/* GRAFICO */}
-      <h3 className="title mb-3">Temperature:</h3>
+      <h3 className="title mb-4">Temperature:</h3>
       <div className="grafic">
-        <LineChart width={900} height={220} data={data} >
+        <LineChart width={1000} height={220} data={data} >
           <XAxis dataKey="name" />
           <YAxis />
           <CartesianGrid stroke="#FFFFFF" strokeDasharray="5 5" />
@@ -58,24 +59,15 @@ function Forecast({ search }) {
         </LineChart>
       </div>
 
-      <h3 className="title my-3">Weekly forecast:</h3>
-        <Accordion defaultActiveKey="0" className="Accordion">
-          {forecast &&
-            forecast.map((forecastItem, index) => (
-              <Accordion.Item key={index} eventKey={index.toString()}>
-                <Accordion.Header>{forecastItem.dt_txt}</Accordion.Header>
-                <Accordion.Body className="dayAcc">
-                  <p>Description: {forecastItem.weather[0].description}</p>
-                  <p>Temperature: {forecastItem.main.temp}°C</p>
-                  <p>Feels like: {forecastItem.main.feels_like}°C</p>
-                  <p>Humidity: {forecastItem.main.humidity}°C</p>
-                </Accordion.Body>
-              </Accordion.Item>
-            ))}
-        </Accordion>
+      
+      <h3 className="title my-4">Weekly forecast:</h3>
+
+      {forecast && <SingleDay forecast={forecast} />}
 
     </>
   );
 }
 
 export default Forecast;
+
+
