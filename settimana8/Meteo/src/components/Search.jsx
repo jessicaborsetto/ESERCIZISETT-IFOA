@@ -17,8 +17,9 @@ function Search({ onSearch }) {
   const [weather, setWeather] = useState({
     name: "",
     sys: [{ country: "", sunrise: "", sunset: "" }],
-    main: [{ temp: "", feels_like: "", humidity: "" }],
+    main: [{ temp: "", feels_like: "", humidity: "", temp_min:"", temp_min:"" }],
     weather: [{ main: "", description: "" }],
+    wind: [{speed:""}],
   });
 
   const searchCity = async () => {
@@ -54,6 +55,7 @@ function Search({ onSearch }) {
     return `${hours}:${minutes}:${seconds}`;
   };
 
+  
   return (
     <>
       <Navbar className="navBar">
