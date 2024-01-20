@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import Accordion from "react-bootstrap/Accordion";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid } from "recharts";
 import SingleDay from "./SingleDay";
 

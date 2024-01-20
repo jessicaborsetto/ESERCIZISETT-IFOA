@@ -12,7 +12,6 @@ function SingleDay({ forecast }) {
       const slideCards = forecast.slice(i, i + cardsPerSlide).map((forecastItem, index) => (
         <Card key={index} className="mr-3 mx-2">
           <Card.Body className="dayAcc">
-            {/* <Card.Title>{forecastItem.dt_txt}</Card.Title> */}
            <WeeklyData date={forecastItem.dt_txt} className="cardDate"/>
 
             <Card.Text>

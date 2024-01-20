@@ -12,7 +12,7 @@ function Search({ onSearch }) {
 
   // Stato per la search bar
   const [search, setSearch] = useState("");
-  const [error, setError] = useState("");  // Assicurati che questa riga sia presente
+  const [error, setError] = useState(""); 
 
   const [weather, setWeather] = useState({
     name: "",
