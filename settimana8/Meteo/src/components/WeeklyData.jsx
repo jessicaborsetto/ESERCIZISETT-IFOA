@@ -1,6 +1,6 @@
-function Data({ }) {
+function WeeklyData({ date}) {
 
-    const today = new Date();
+    const today = new Date(date);
     const week = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
     const months = [
         'January',
@@ -21,8 +21,8 @@ function Data({ }) {
     const day = week[today.getDay()]
     const numberDay = today.getDate()
     const minutes = today.getMinutes()
+    const currentHour = `${hour.toString().padStart(2, '0')}:${minutes.toFixed(0).padStart(2, '0')}`; //per avere il doppio numero sull'ora
     const month = months[today.getMonth()]
-    const currentHour = `${hour.toString().padStart(2, '0')}:${minutes.toFixed(0).padStart(2, '0')}`;
 
     // console.log(today)
     // console.log(month)
@@ -52,4 +52,4 @@ function Data({ }) {
     )
 }
 
-export default Data
+export default WeeklyData

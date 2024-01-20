@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Carousel from 'react-bootstrap/Carousel';
-import Data from './Data';
+import WeeklyData from './WeeklyData';
 
 function SingleDay({ forecast }) {
   const cardsPerSlide = 4;
@@ -13,7 +13,7 @@ function SingleDay({ forecast }) {
         <Card key={index} className="mr-3 mx-2">
           <Card.Body className="dayAcc">
             {/* <Card.Title>{forecastItem.dt_txt}</Card.Title> */}
-           <Data date={forecastItem.dt_txt} className="cardDate"/>
+           <WeeklyData date={forecastItem.dt_txt} className="cardDate"/>
 
             <Card.Text>
             <p>Weather: {forecastItem.weather[0].description}</p>
