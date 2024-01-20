@@ -1,7 +1,7 @@
-function Data({ date }){
+function Data({ }) {
 
-    const today = new Date(date);
-    const week = ["Domenica", "Lunedì", "Martedì", "Mercoledì","Giovedì", "Venerdì","Sabato"];
+    const today = new Date();
+    const week = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
     const months = [
         'January',
         'February',
@@ -19,6 +19,7 @@ function Data({ date }){
     const year = today.getFullYear()
     const hour = today.getHours()
     const day = week[today.getDay()]
+    const numberDay = today.getDate()
     const minutes = today.getMinutes()
     const currentHour = `${hour}:${minutes}`
     const month = months[today.getMonth()]
@@ -30,12 +31,24 @@ function Data({ date }){
     // console.log(minutes)
     // console.log(currentHour)
 
-    return(
-        <div className="CurrentData"> 
-            <h5>{`${month} ${year}`}</h5>
-            <h6>{`${day} ${currentHour}`}</h6>
+    return (
+        <>
 
-        </div>
+            <div className="dateIcons">
+                <i className="bi bi-calendar-fill me-3"></i>
+                <h5 className="m-0">{`${day} ${numberDay}`}</h5>
+            </div>
+
+            <div className="dateIcons">
+                <i className="bi bi-clock-fill me-3"></i>
+                <h4 className="m-0">{currentHour}</h4>
+            </div>
+
+            <h6>{`${month} ${year}`}</h6>
+            <hr />
+
+
+        </>
     )
 }
 

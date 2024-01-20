@@ -59,7 +59,9 @@ function Search({ onSearch }) {
   return (
     <>
       <Navbar className="navBar">
-        <Data className="CurrentData"></Data>
+        <div className="CurrentData">
+          <Data></Data>
+        </div>
         <div className="d-flex justify-content-between align-items-center search">
           <div>
             <Form className="d-flex">
@@ -140,7 +142,7 @@ function Search({ onSearch }) {
 
         {/* CONDITION */}
         {weather.weather[0].main !== "" && (
-          <p className="m-0"> Description: {weather.weather[0].description}</p>
+          <p className="m-0"> Weather: {weather.weather[0].description}</p>
         )}
 
       </div>
